@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Drive Downloadable</title>
+  <style>
+    body {
+      width: 22rem;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #95a5a6;
+      padding: 1.2rem 0;
+      transition: .2s ease;
+    }
+
+    .btn:hover {
+      background-color: #7f8c8d;
+    }
+
+    .btn:active {}
+
+    .btn-rdy {
+      background-color: #1abc9c;
+    }
+
+    .btn-rdy:hover {
+      background-color: #16a085;
+    }
+
+    .btn-rdy:active {}
+
+    .btn,
+    .in,
+    .out {
+      overflow: hidden;
+      width: 100%;
+      border: 0;
+      color: white;
+    }
+
+    .in,
+    .out {
+      height: 5rem;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .in {
+      background-color: #34495e;
+    }
+
+    .out {
+      background-color: #2c3e50;
+    }
+
+    *::-webkit-input-placeholder {
+      color: white;
+    }
+    .copied{
+
+      display: none;
+      opacity: 0;
+
+      justify-content: center;
+      align-items: center;
+
+      transition: 1s ease;
+
+      position: fixed;
+      top:0;
+      bottom:0;
+      right: 0;
+      left:0;
+
+      background-color: #1abc9c;
+
+    }.copied h1{
+
+      color:white;
+      font-size: 2rem;
+
+    }
+
+    .overlayani{
+      animation-name: ani;
+      animation-duration: 1.2s;
+      display: flex;
+    }
+
+    @keyframes ani {
+      0%{opacity: 0;display: none;}
+      50%{opacity: 1;display: flex;}
+      100%{opacity: 0;display: none;}
+    }
+
+  </style>
+  <link href="./font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="overlay" class="copied">
+
+    <h1>Copied!<h1>
+
+  </div>
+
+  <div class="bars">
+    <input id="in" placeholder="Paste the Drive share link here" class="in"></input>
+    <input id="out" placeholder="Output will appear here" class="out"></input>
+  </div>
+  <button id="btn" class="btn"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></button>
+</body>
+<script src="popup.js"></script>
+
+</html>
