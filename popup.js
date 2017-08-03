@@ -2,8 +2,12 @@ var i = document.getElementById("in");
 var o = document.getElementById("out");
 var btn = document.getElementById("btn");
 var overlay = document.getElementById("overlay");
+var close = document.getElementById("close");
+
 
 var copy = false;
+
+console.log(i.value.toString());
 
 btn.addEventListener("click", function() {
 
@@ -18,9 +22,9 @@ btn.addEventListener("click", function() {
       console.log('unable to copy');
     }
 
-window.setTimeout(function(){
-    overlay.classList.remove("overlayani");
-}, 1000);
+    window.setTimeout(function() {
+      overlay.classList.remove("overlayani");
+    }, 1000);
 
 
   } else {
@@ -32,6 +36,12 @@ i.addEventListener("keyup", function() {
 
   var inval = i.value.toString();
   var qual = '(usp=sharing)$';
+
+  if (inval == "" || inval == null) {
+    close.style.opacity = '0.0';
+  } else {
+    close.style.opacity = '1.0';
+  }
 
   var chk = inval.match(qual);
   console.log(chk);
@@ -65,3 +75,9 @@ function act(state) {
     copy = false;
   }
 }
+
+close.addEventListener('click', function() {
+  i.value = "";
+  o.value = "";
+  close.style.opacity = "0";
+});

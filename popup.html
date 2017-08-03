@@ -61,6 +61,14 @@
       font-size: 1.2rem;
     }
 
+    .bar{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
     .in {
       background-color: #34495e;
     }
@@ -118,6 +126,28 @@
         display: none;
       }
     }
+
+    .close{
+
+      background-color: rgba(44, 62, 80,0.5);
+      color:rgba(231, 76, 60,0.8);
+
+      height: 100%;
+      width: 4rem;
+
+      opacity: 0;
+
+      position: absolute;
+      right:0;
+      top:0;
+      bottom:0;
+    }.close::before{
+      height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
   </style>
   <link href="./font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
@@ -130,8 +160,8 @@
   </div>
 
   <div class="bars">
-    <input id="in" placeholder="Paste the Drive share link here" class="in"></input>
-    <input id="out" placeholder="Output will appear here" class="out"></input>
+    <div class="bar"><input id="in" value="" placeholder="Paste the Drive share link here" class="in"><i id="close" class="fa fa-times-circle fa-2x close" aria-hidden="true"></i></div>
+    <div class="bar"><input id="out" placeholder="Output will appear here" class="out"></div>
   </div>
   <button id="btn" class="btn"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></button>
 </body>
