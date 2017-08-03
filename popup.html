@@ -4,18 +4,26 @@
 <head>
   <title>Drive Downloadable</title>
   <style>
+
+    html,
     body {
       width: 22rem;
       margin: 0;
       overflow: hidden;
     }
 
+    .bars {
+      width: 100%;
+    }
+
     .btn {
+      width: 22rem;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #95a5a6;
       padding: 1.2rem 0;
+      margin:0;
       transition: .2s ease;
     }
 
@@ -39,15 +47,17 @@
     .in,
     .out {
       overflow: hidden;
-      width: 100%;
       border: 0;
       color: white;
     }
 
     .in,
     .out {
+      width: 21rem;
+      padding:0 1rem;
       height: 5rem;
       color: white;
+      padding-left: 1rem;
       font-size: 1.2rem;
     }
 
@@ -62,7 +72,8 @@
     *::-webkit-input-placeholder {
       color: white;
     }
-    .copied{
+
+    .copied {
 
       display: none;
       opacity: 0;
@@ -73,32 +84,40 @@
       transition: 1s ease;
 
       position: fixed;
-      top:0;
-      bottom:0;
+      top: 0;
+      bottom: 0;
       right: 0;
-      left:0;
+      left: 0;
 
       background-color: #1abc9c;
-
-    }.copied h1{
-
-      color:white;
-      font-size: 2rem;
-
     }
 
-    .overlayani{
+    .copied h1 {
+
+      color: white;
+      font-size: 2rem;
+    }
+
+    .overlayani {
       animation-name: ani;
       animation-duration: 1.2s;
       display: flex;
     }
 
     @keyframes ani {
-      0%{opacity: 0;display: none;}
-      50%{opacity: 1;display: flex;}
-      100%{opacity: 0;display: none;}
+      0% {
+        opacity: 0;
+        display: none;
+      }
+      50% {
+        opacity: 1;
+        display: flex;
+      }
+      100% {
+        opacity: 0;
+        display: none;
+      }
     }
-
   </style>
   <link href="./font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
