@@ -3,7 +3,7 @@
 
   "name": "Drive downloadable",
   "description": "Make Google Drive files direct-link downloadable with a click!",
-  "version": "0.5",
+  "version": "0.8",
 
   "browser_action": {
     "default_icon": "icon.png",
